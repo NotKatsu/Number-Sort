@@ -34,3 +34,26 @@ def lowestToHighest(numbers: list[int]) -> list[int]:
         result.append(highestNumber)
 
     return result
+
+
+def getLargest(numbers: list[int]) -> int:
+    """Get the largest number from a list of integers, expects array returns int."""
+    lastNumber = 0
+
+    for a in range(len(numbers)):
+        if numbers[a] >= lastNumber:
+            lastNumber = numbers[a]
+
+    return lastNumber
+
+
+def getSmallest(numbers: list[int]) -> int:
+    """Get the smallest number from a list of integers, expects array returns int."""
+    lastNumber = float('inf')
+
+    for a in range(len(numbers)):
+        if numbers[a] <= lastNumber:
+            lastNumber = numbers[a]
+
+    return lastNumber
+
